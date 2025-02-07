@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Daily Expense Tracker</h1>
+        
+        <div class="expense-form">
+            <input type="date" id="date" required>
+            <input type="text" id="description" placeholder="Expense Detail" required>
+            <input type="number" id="amount" placeholder="Amount ₹" required>
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <h2>Expense List</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount (₹)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-list"></tbody>
+            </table>
+        </div>
+
+        <h3>Total: ₹ <span id="total-amount">0</span></h3>
+
+        <button class="pdf-btn" onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
